@@ -1,3 +1,4 @@
+
 package Steps;
 
 import BaseLayer.BaseClass;
@@ -19,6 +20,7 @@ public class LoginPageStep extends BaseClass {
 		loginpage = new LoginPage();
 		loginpage.enterUsenameAndPassword("Admin", "admin123");
 	}
+	
 
 	@Then("user click on login button")
 	public void user_click_on_login_button() {
