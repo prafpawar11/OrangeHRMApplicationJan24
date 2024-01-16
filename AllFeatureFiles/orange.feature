@@ -9,3 +9,7 @@ Feature: Test the Sauce Demo application
     When user validate home page url
     And user validate home page title
     And user validate home page logo
+    
+    Scenario: validate PIM page
+    When user click on pim link
+    And user validate pim page url
