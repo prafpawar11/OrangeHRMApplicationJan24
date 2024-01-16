@@ -7,6 +7,7 @@ import PageLayer.HomePage;
 import io.cucumber.java.en.When;
 
 public class HomePageStep extends BaseClass {
+	
 	private static HomePage home;
 	
 	@When("user validate home page url")
@@ -20,6 +21,13 @@ public class HomePageStep extends BaseClass {
 	public void user_validate_home_page_title() {
 	  String title = home.homePageTitle();
 	  Assert.assertEquals(title, "OrangeHRM");
+	}
+	
+	@When("user validate home page logo")
+	public void user_validate_home_page_logo() {
+	    boolean a = home.validiateLogo();
+	    System.out.println(a);
+	    Assert.assertTrue(a);
 	}
 
 }

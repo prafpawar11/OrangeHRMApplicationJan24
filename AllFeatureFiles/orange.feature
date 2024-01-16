@@ -8,3 +8,4 @@ Feature: Test the Sauce Demo application
     Scenario: validate home page Functionality
     When user validate home page url
     And user validate home page title
+    And user validate home page logo
