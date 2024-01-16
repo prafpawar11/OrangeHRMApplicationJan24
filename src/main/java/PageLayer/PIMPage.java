@@ -24,6 +24,12 @@ public class PIMPage extends BaseClass{
 	@FindBy(xpath ="//button[text()=' Save ']")
 	private WebElement save;
 	
+	@FindBy(xpath ="(//input[@class='oxd-input oxd-input--active'])[3]")
+	private WebElement empid;
+	
+	@FindBy(xpath="//a[text()='Employee List']")
+	private WebElement emplist;
+	
 	public PIMPage()
 	{
 		PageFactory.initElements(driver,this);
@@ -48,6 +54,15 @@ public class PIMPage extends BaseClass{
 		Wait.sendKeys(lname, lastName);
 		Wait.click(save);
 		
+	}
+	
+	public String empId()
+	{
+		return Wait.getAttribute(empid,"value");
+	}
+	public void empList()
+	{
+		Wait.click(emplist);
 	}
 	}
 

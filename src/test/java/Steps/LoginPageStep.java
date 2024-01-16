@@ -24,4 +24,6 @@ public class LoginPageStep extends BaseClass {
 	public void user_click_on_login_button() {
 		loginpage.clickOnLoginButton();
 	}
+	
+	
 }

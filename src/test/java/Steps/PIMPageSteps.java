@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 public class PIMPageSteps extends BaseClass{
     
 	private static  PIMPage pim;
-	
+	String empId;
 	@When("user click on pim link")
 	public void user_click_on_pim_link() {
 	    pim = new PIMPage();
@@ -29,5 +29,15 @@ public class PIMPageSteps extends BaseClass{
 	@When("user enter fname and lastname and click on save button")
 	public void user_enter_fname_and_lastname_and_click_on_save_button() {
 	    pim.addInfo("Vaibhav", "Koche");
+	}
+	
+	@When("user capture employee id")
+	public void user_capture_employee_id() {
+	 empId = pim.empId();  
+	
+	}
+	@When("user click employee list button")
+	public void user_click_employee_list_button() {
+	  pim.empList();
 	}
 }

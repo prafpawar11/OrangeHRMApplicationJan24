@@ -15,3 +15,5 @@ Feature: Test the Sauce Demo application
     And user validate pim page url
     And Click on Add Employee
     And user enter fname and lastname and click on save button
+    And user capture employee id
+    And user click employee list button
