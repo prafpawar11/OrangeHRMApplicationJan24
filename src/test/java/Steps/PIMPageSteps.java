@@ -21,4 +21,13 @@ public class PIMPageSteps extends BaseClass{
 	  boolean b =  Pim.contains("pim");
 	  Assert.assertEquals(b, true);
 	}
+	
+	@When("Click on Add Employee")
+	public void click_on_add_employee() {
+	    pim.clickAddEmployee();
+	}
+	@When("user enter fname and lastname and click on save button")
+	public void user_enter_fname_and_lastname_and_click_on_save_button() {
+	    pim.addInfo("Vaibhav", "Koche");
+	}
 }
